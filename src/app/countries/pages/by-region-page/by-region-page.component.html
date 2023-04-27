@@ -1,0 +1,20 @@
+<h2>Por Región</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- SearchBox -->
+        <shared-search-box placeholder="Buscar por Región" (onValue)="searchByRegion( $event )"></shared-search-box>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <!-- Tabla -->
+        <hr>
+        <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+        <countries-table [countries]="countries"></countries-table>
+    </div>
+</div>
+
